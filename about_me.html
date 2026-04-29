@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:270px;
+background:rgba(255,255,255,0.06);
+backdrop-filter: blur(12px);
+padding:30px 20px;
+position:fixed;
+left:0;
+top:0;
+height:100%;
+border-right: 1px solid rgba(56,189,248,0.2);
+}
+
+.sidebar h2{
+font-family:'Orbitron',sans-serif;
+color:#38bdf8;
+margin-bottom:35px;
+text-align:center;
+font-size:28px;
+}
+
+.sidebar a{
+display:block;
+color:#cbd5e1;
+text-decoration:none;
+padding:14px 16px;
+margin:10px 0;
+border-radius:10px;
+transition:0.3s;
+}
+
+.sidebar a:hover{
+background:linear-gradient(90deg,#38bdf8,rgba(56,189,248,0.2));
+color:#0f172a;
+transform:translateX(8px);
+}
+
+/* MAIN */
+.main{
+margin-left:270px;
+padding:60px;
+width:100%;
+}
+
+/* TITLE */
+.title{
+font-size:36px;
+font-family:'Orbitron',sans-serif;
+color:#38bdf8;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+/* GLASS CARD */
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+max-width:950px;
+margin-bottom:25px;
+}
+
+/* HERO */
+.hero{
+font-size:44px;
+font-weight:700;
+color:#38bdf8;
+font-family:'Orbitron',sans-serif;
+margin-bottom:20px;
+line-height:1.2;
+}
+
+/* TEXT */
+.card p{
+color:#cbd5e1;
+line-height:1.9;
+font-size:16px;
+margin-bottom:12px;
+}
+
+.highlight{
+color:#38bdf8;
+font-weight:bold;
+}
+
+/* SECTION TITLE */
+.section-title{
+font-size:22px;
+color:#38bdf8;
+margin-bottom:15px;
+font-family:'Orbitron',sans-serif;
+}
+
+/* BUTTONS */
+.buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 18px;
+background:#38bdf8;
+color:#0f172a;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0ea5e9;
+transform:translateY(-2px);
+}
+
+.btn.secondary{
+background:transparent;
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn.secondary:hover{
+background:#38bdf8;
+color:#0f172a;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.main{
+margin-left:0;
+padding:20px;
+}
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+.sidebar a{
+margin:5px;
+}
+.hero{
+font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+<h2>Murtaza</h2>
+
+<a href="index.html">🏠 Home</a>
+<a href="about_me.html">👤 About Me</a>
+<a href="skills.html">🛠 Skills</a>
+<a href="#">📁 Projects</a>
+<a href="#">📊 Experience</a>
+<a href="#">📜 Certificates</a>
+<a href="#">📞 Contact</a>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<div class="title">ABOUT ME</div>
+
+<!-- INTRO CARD -->
+<div class="card">
+
+<div class="hero">
+Hello, I am Murtaza<br>
+an aspiring AI Engineer
+</div>
+
+<p>
+My name is <span class="highlight">Murtaza</span>, I am 16 years old and currently living in <span class="highlight">Quetta, Pakistan</span>.
+</p>
+
+<p>
+I started my serious journey in 2025 to become successful in the field of <span class="highlight">Artificial Intelligence</span>.
+</p>
+
+<p>
+I have learned programming languages such as <span class="highlight">Python, C, HTML, CSS, and JavaScript</span> and built a strong understanding of computer science fundamentals.
+</p>
+
+<p>
+I have also completed important courses like <span class="highlight">CS50X and CS50P</span>.
+</p>
+
+<p>
+Currently, I am focusing on App Development and Web Development because they improve my logic and help me prepare for AI.
+</p>
+
+<p>
+My goal is to reach a strong and professional level before entering university.
+</p>
+
+<div class="buttons">
+<a href="#" class="btn">Download CV</a>
+<a href="#" class="btn secondary">View Projects</a>
+</div>
+
+</div>
+
+<!-- PYTHON -->
+<div class="card">
+
+<div class="section-title">Python Skills</div>
+<p>✔ Variables, Loops, Functions</p>
+<p>✔ OOP (Classes, Objects, Inheritance)</p>
+<p>✔ Basic Problem Solving</p>
+<p>✔ Tkinter & PyQt5 (GUI Development)</p>
+
+<p>
+Currently Learning: Data Structures (Lists, Stacks, Queues, Trees)
+</p>
+
+<p>
+Planned Libraries: NumPy, Pandas, Matplotlib, Requests, BeautifulSoup
+</p>
+
+</div>
+
+<!-- WEB DEV -->
+<div class="card">
+
+<div class="section-title">App & Web Development</div>
+
+<p>
+I know: <span class="highlight">HTML, CSS, JavaScript, Python</span>
+</p>
+
+<p>
+My goal is to learn backend development (Flask / Django), REST APIs, authentication systems, and SQL databases (MySQL / PostgreSQL).
+</p>
+
+</div>
+
+<!-- ACCOUNTING -->
+<div class="card">
+
+<div class="section-title">Accounting & Finance</div>
+
+<p>Basic Accounting: Debit / Credit</p>
+<p>Financial Statements</p>
+<p>Budgeting & Financial Analysis</p>
+<p>Excel for data analysis and reporting</p>
+
+</div>
+
+</main>
+
+</body>
+</html>

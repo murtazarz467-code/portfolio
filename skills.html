@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+
+/* scrollbar firefox */
+scrollbar-width: thin;
+scrollbar-color: #38bdf8 rgba(255,255,255,0.04);
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+min-height:100vh;
+display:flex;
+}
+
+/* ===== SCROLLBAR (chrome) ===== */
+::-webkit-scrollbar{
+width:7px;
+}
+
+::-webkit-scrollbar-track{
+background:rgba(255,255,255,0.04);
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(180deg,#38bdf8,#0ea5e9);
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#38bdf8;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+width:270px;
+background:rgba(255,255,255,0.06);
+backdrop-filter: blur(12px);
+padding:30px 20px;
+position:fixed;
+left:0;
+top:0;
+height:100%;
+box-shadow:0 4px 25px rgba(0,0,0,0.5);
+border-right:1px solid rgba(56,189,248,0.2);
+}
+
+.sidebar h2{
+font-family:'Orbitron',sans-serif;
+color:#38bdf8;
+margin-bottom:35px;
+text-align:center;
+font-size:28px;
+letter-spacing:3px;
+}
+
+.sidebar a{
+display:block;
+color:#cbd5e1;
+text-decoration:none;
+padding:14px 16px;
+margin:10px 0;
+border-radius:10px;
+transition:0.3s;
+font-size:16px;
+}
+
+.sidebar a:hover{
+background:linear-gradient(90deg,#38bdf8,rgba(56,189,248,0.2));
+color:#0f172a;
+transform:translateX(8px);
+}
+
+/* ===== MAIN ===== */
+.main{
+margin-left:270px;
+padding:60px;
+width:100%;
+}
+
+/* ===== BOX ===== */
+.skills-box{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+padding:40px;
+border-radius:15px;
+box-shadow:0 12px 30px rgba(0,0,0,0.35);
+border:1px solid rgba(56,189,248,0.15);
+transition:transform 0.2s ease;
+}
+
+.skills-box:hover{
+transform:translateY(-3px);
+}
+
+/* ===== TYPING TITLE ===== */
+.typing{
+color:#38bdf8;
+font-size:32px;
+font-family:'Orbitron',sans-serif;
+text-shadow:0 0 6px rgba(56,189,248,0.5);
+border-right:2px solid #38bdf8;
+white-space:nowrap;
+overflow:hidden;
+min-height:40px;
+}
+
+/* ===== NOTE ===== */
+.note{
+color:#94a3b8;
+margin-bottom:25px;
+font-size:14px;
+line-height:1.6;
+}
+
+/* ===== SECTION ===== */
+.section-title{
+margin-top:25px;
+margin-bottom:10px;
+color:#38bdf8;
+font-size:20px;
+}
+
+/* ===== SKILL ===== */
+.skill{
+margin-bottom:18px;
+}
+
+.skill-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:6px;
+color:#cbd5e1;
+font-weight:bold;
+font-size:15px;
+}
+
+.bar{
+width:100%;
+height:10px;
+background:rgba(255,255,255,0.1);
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+border-radius:10px;
+transition:width 0.6s ease-in-out;
+}
+
+/* ===== WIDTHS ===== */
+.html{width:30%;}
+.css{width:40%;}
+.js{width:50%;}
+.python{width:80%;}
+.c{width:50%;}
+.ai{width:70%;}
+
+/* ===== SOFT SKILLS ===== */
+.soft-skills{
+color:#cbd5e1;
+line-height:1.8;
+margin-top:10px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.skill,
+.section-title,
+.soft-skills,
+.note{
+opacity:0;
+transform:translateY(20px);
+transition:all 0.6s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width:768px){
+
+body{
+flex-direction:column;
+}
+
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:12px;
+gap:5px;
+}
+
+.sidebar h2{
+width:100%;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.sidebar a{
+margin:4px;
+padding:8px 10px;
+font-size:13px;
+border-radius:8px;
+}
+
+.main{
+margin-left:0;
+padding:15px;
+}
+
+.skills-box{
+padding:20px;
+border-radius:12px;
+}
+
+.typing{
+font-size:24px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+<h2>Murtaza</h2>
+
+<a href="index.html">🏠 Home</a>
+<a href="about_me.html">👤 About Me</a>
+<a href="skills.html">🛠 Skills</a>
+<a href="#">📁 Projects</a>
+<a href="#">📊 Experience</a>
+<a href="#">📜 Certificates</a>
+<a href="#">📞 Contact</a>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<div class="skills-box">
+<h1 class="typing"></h1>
+
+<p class="note">
+📌 These percentages show my current understanding level based on practice and learning progress.
+</p>
+
+<div class="section-title">🌐 Frontend</div>
+
+<div class="skill">
+<div class="skill-header"><span>HTML</span><span>30%</span></div>
+<div class="bar"><div class="progress html"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-header"><span>CSS</span><span>40%</span></div>
+<div class="bar"><div class="progress css"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-header"><span>JavaScript</span><span>50%</span></div>
+<div class="bar"><div class="progress js"></div></div>
+</div>
+
+<div class="section-title">🐍 Programming</div>
+
+<div class="skill">
+<div class="skill-header"><span>Python</span><span>80%</span></div>
+<div class="bar"><div class="progress python"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-header"><span>C</span><span>50%</span></div>
+<div class="bar"><div class="progress c"></div></div>
+</div>
+
+<div class="section-title">🤖 AI Path</div>
+
+<div class="skill">
+<div class="skill-header"><span>AI Basics</span><span>70%</span></div>
+<div class="bar"><div class="progress ai"></div></div>
+</div>
+
+<div class="section-title">🧠 Soft Skills</div>
+
+<p class="soft-skills">
+✔ Problem Solving<br>
+✔ Self Learning<br>
+✔ Consistency<br>
+✔ Project Building
+</p>
+
+</div>
+
+</main>
+
+<!-- SCROLL ANIMATION -->
+<script>
+const elements = document.querySelectorAll(
+".skill, .section-title, .soft-skills, .note"
+);
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- TYPING EFFECT -->
+<script>
+const text = "My Skills";
+let i = 0;
+let deleting = false;
+
+function type() {
+const el = document.querySelector(".typing");
+
+if(!deleting){
+el.textContent = text.substring(0, i);
+i++;
+
+if(i > text.length){
+deleting = true;
+setTimeout(type, 1000);
+return;
+}
+}else{
+el.textContent = text.substring(0, i);
+i--;
+
+if(i === 0){
+deleting = false;
+}
+}
+
+setTimeout(type, deleting ? 80 : 120);
+}
+
+type();
+</script>
+
+</body>
+</html>
